@@ -11,6 +11,10 @@ func add_click_callable(key: int, callable: Callable) -> void:
 	var handler = _ensure_keyclick_handler(key)
 	handler.add_click_callable(callable)
 
+func add_press_callable(key: int, callable: Callable) -> void:
+	var handler = _ensure_keyclick_handler(key)
+	handler.add_press_callable(callable)
+
 func on_input_event(event: InputEvent) -> void:
 	if event is InputEventKey:
 		for key in _keyclick_handlers.keys():
