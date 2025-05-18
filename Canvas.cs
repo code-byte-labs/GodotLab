@@ -1,5 +1,8 @@
-using Godot;
 using System.Collections.Generic;
+using Godot;
+
+namespace world;
+
 public partial class Canvas : RefCounted
 {
     public static void DrawRoundRect(Node2D node2D, Rect2 rect, float radius, Color color, bool fill)
@@ -28,7 +31,7 @@ public partial class Canvas : RefCounted
         }
         else
         {
-            node2D.DrawPolyline(points.ToArray(), color);
+            node2D.DrawPolyline(points.ToArray(), color, -4, true);
         }
         return;
 
